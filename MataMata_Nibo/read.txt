@@ -1,0 +1,18 @@
+5 projects were created to represent the tournament solution.
+1) Doamin.
+where I have my business class, my interfaces and service repository for my business rule.
+2) Framwork
+class modules created to aid in the production of code, where they can be used for other solution projects.
+3) Repository
+where it has my database mappings, names, references and my repository that implements my interfaces.
+4) UnitTest
+where my methods tests are created and where I generate my database.
+5) Web
+project for interaction with the user, where to register the teams, generate the keys of confrontations to know the champion.
+
+my solution was developed with MVC using DDD architectures, respecting SOLID principles with framework Nhibernate, nUnit, AutoMapper, Ninject, Grid.Mvc.Ajax
+
+to generate the database, you have to open the class SchemaDBTester.cs that is in the UnitTest project inside the Repository. there is the method of generating the base and another to update.
+the database has to be created with the name WoodsWoods_Nibo in the sqlServer and then run the command.
+
+there is a link in my project with author name and curriculum, where I have my profile in html and another with my CV in pdf

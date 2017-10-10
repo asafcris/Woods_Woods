@@ -1,0 +1,14 @@
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\Domain.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\Domain.pdb
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\FrameWork.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\NHibernate.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\FluentNHibernate.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\Iesi.Collections.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\FrameWork.pdb
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\NHibernate.xml
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\FluentNHibernate.pdb
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\FluentNHibernate.xml
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\bin\Debug\Iesi.Collections.xml
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\obj\Debug\Domain.dll
+c:\users\asafc\documents\visual studio 2015\Projects\MataMata_Nibo\Domain\obj\Debug\Domain.pdb
