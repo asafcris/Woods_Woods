@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "Team- List";
+    Layout = "../Shared/_Layout.cshtml";
+
+}
+
+@using Domain.Model
+@using GridMvc.Html
+@using Web.Models
+@model KeyViewModel
+
+
+@{
+    IList<KeyViewModel> keys = (IList<KeyViewModel>)@ViewBag.KeysTems;
+}
+
+<p>
+
+    <div class="jumbotron">
+
+<p class="lead">Championship Table .</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="panel panel" data-collapsed="0">
+
+            <div class="panel-heading">
+                <div class="panel-title">
+                  
+                    <div class="btn-group">
+
+
+
+                        <a class="btn btn-primary" href="@Url.Action("Generate", "Key")">
+                            <i class="entypo-list-add"></i>
+                            Generate Key
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <br /><br />
+            @ViewBag.Message
+            <div class="panel-body">
+                <div class="scroll" id="listaResultado">
+
+                    <div class="box ">
+
+                        <div class="box-body">
+                            <p>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1> Semi-Final</h1>
+                                        @foreach (var key in keys.Where(x => x.Keys == 2))
+                                        {
+
+                                            using (Html.BeginForm("winner", "Key", FormMethod.Post))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                <div class="col-md-4">
+                                                    @Html.ValidationSummary(true)
+                                                    <div class="col-md-4">
+                                                        @Html.Hidden("Id", key.Id)
+
+                                                        <div class="form-group">
+                                                            <label class="control-label">@key.TeamOne</label>
+                                                            <br/>
+                                                            <div class="">
+                                                                @Html.TextBox("TeamGolsOne" , key.TeamGolsOne, new {@class = "form-control"})
+                                                                @Html.ValidationMessageFor(x => x.TeamGolsOne)
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <h1>X</h1>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+
+                                                        <div class="form-group">
+                                                            <label class="control-label">@key.TeamTwo</label>
+                                                            <br/>
+                                                            <div class="">
+                                                                @Html.TextBox("TeamGolsTwo",key.TeamGolsTwo, new {@class = "form-control"})
+                                                                @Html.ValidationMessageFor(x => x.TeamGolsTwo)
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-md-offset-2 col-md-10">
+                                                            <input type="submit" value="Save" class="btn btn-default"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <hr />
+                                            }
+                                        }
+                                        <h1>End</h1>
+                                        @foreach (var key in keys.Where(x => x.Keys == 1))
+                                        {
+                                            using (Html.BeginForm("winner", "Key", FormMethod.Post))
+                                            {
+                                               @Html.AntiForgeryToken()
+                                                <div class="col-md-4">
+                                                    @Html.ValidationSummary(true)
+                                                    @Html.Hidden("Id", key.Id)
+
+                                                    <div class="form-group">
+                                                        <label class="control-label">@key.TeamOne</label>
+                                                        <br />
+                                                        <div class="">
+                                                            @Html.TextBox("TeamGolsOne", key.TeamGolsOne, new { @class = "form-control" })
+                                                            @Html.ValidationMessageFor(x => x.TeamGolsOne)
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                    <div class="col-md-2">
+                                                        <h1>X</h1>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+
+                                                        <div class="form-group">
+                                                            <label class="control-label">@key.TeamTwo</label>
+                                                            <br />
+                                                            <div class="">
+                                                                @Html.TextBox("TeamGolsTwo", key.TeamGolsTwo, new { @class = "form-control" })
+                                                                @Html.ValidationMessageFor(x => x.TeamGolsTwo)
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-offset-2 col-md-10">
+                                                                <input type="submit" value="Save" class="btn btn-default" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class="clearfix"></div>
+                                                <hr />
+                                            }
+                                        }
+                                        <h1> Champion</h1>
+                                        @foreach (var key in keys.Where(x => x.Keys == 0))
+                                        {
+                                            using (Html.BeginForm("winner", "Key", FormMethod.Post))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                <div class="col-md-4">
+                                                    <div class="col-md-4">
+                                                        @Html.HiddenFor(x => x.Id, key.Id)
+
+                                                        <div class="form-group">
+                                                            <label class="control-label">@key.TeamOne</label>
+                                                          
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+
+                                                </div>
+
+                                            }
+                                        }
+                                    </div>
+
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</p>
